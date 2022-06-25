@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "7md:pebbles_block"
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "pebbles_block",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:geometry": "geometry.pebbles",
+            "minecraft:pick_collision": {
+				"origin": [-2, 0, -1],
+				"size": [3, 1, 3]
+			},
+			"minecraft:entity_collision": false,
+            "minecraft:destroy_time": 0.3,
+            "minecraft:breakonpush": true,
+            "minecraft:loot": "loot_tables/blocks/pebbles.json"
+        }
+    }
+}

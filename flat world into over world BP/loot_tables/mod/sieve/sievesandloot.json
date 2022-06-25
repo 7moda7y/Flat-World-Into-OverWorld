@@ -1,0 +1,17 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 3,
+                "max": 5
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 10,
+                    "name": "7md:pebbles"
+                }
+            ]
+        }
+    ]
+}

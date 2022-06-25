@@ -1,0 +1,15 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"wooden_hammer": {
+			"textures": "textures/items/wooden_hammer"
+		},
+		"pebbles": {
+			"textures": "textures/items/pebbles"
+		},
+		"worm": {
+			"textures": "textures/items/worm"
+		}
+	}
+}

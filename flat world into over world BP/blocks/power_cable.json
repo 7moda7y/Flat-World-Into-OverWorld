@@ -1,0 +1,28 @@
+{
+  "format_version": "1.18.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "7md:power_cable",
+      "properties":{
+        "7md:main_right_left": [0,1],
+        "7md:main_south_west": [0,1],
+        "7md:powerclose1": [0,1],
+        "7md:powerclose2": [0,1],
+        "7md:main_up_down": [0,1],
+        "7md:powerclose3": [0,1],
+        "7md:powerclose4": [0,1],
+        "7md:powerclose5": [0,1],
+        "7md:powerclose6": [0,1]
+      }
+    },
+    "components": {
+      "minecraft:material_instances": {
+        "*":{
+          "texture":"power_cable",
+          "render_method": "alpha_test"
+        }
+      },
+    "minecraft:geometry": "geometry.power_cable"
+    }
+  }
+}

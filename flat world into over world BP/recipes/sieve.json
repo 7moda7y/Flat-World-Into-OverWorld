@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "7md:sieve"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ASA",
+      "B B",
+      "B B"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:planks"
+      },
+      "B": {
+        "item": "minecraft:stick"
+      },
+      "S":{
+        "item": "minecraft:string"
+      }
+    },
+    "result": {
+      "item": "7md:sieve"
+    }
+  }
+}

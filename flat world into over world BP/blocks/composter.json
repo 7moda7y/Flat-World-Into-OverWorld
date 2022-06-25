@@ -1,0 +1,462 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "7md:seed_composter",
+            "is_experimental": false,
+            "properties": {
+                "7md:state": [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+            }
+        },
+        "components": {
+            "minecraft:destroy_time": 3,
+            "minecraft:creative_category": {
+				"category": "items"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "drop"
+			}
+        },
+        "permutations": [
+            {
+				"condition": "query.block_property('7md:state') == 0",
+				"components":{
+					"minecraft:geometry": "geometry.composter",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter0",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 1",
+				"components":{
+					"minecraft:geometry": "geometry.composter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 2",
+				"components":{
+					"minecraft:geometry": "geometry.composter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 3",
+				"components":{
+					"minecraft:geometry": "geometry.composter3",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 4",
+				"components":{
+					"minecraft:geometry": "geometry.composter4",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 5",
+				"components":{
+					"minecraft:geometry": "geometry.composter5",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 6",
+				"components":{
+					"minecraft:geometry": "geometry.composter6",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 7",
+				"components":{
+					"minecraft:geometry": "geometry.composter7",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 8",
+				"components":{
+					"minecraft:geometry": "geometry.composter8",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 9",
+				"components":{
+					"minecraft:geometry": "geometry.composter9",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 10",
+				"components":{
+					"minecraft:geometry": "geometry.composter10",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 11",
+				"components":{
+					"minecraft:geometry": "geometry.composter11",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:off"
+					}
+				}
+			},
+            {
+				"condition": "query.block_property('7md:state') == 12",
+				"components":{
+					"minecraft:geometry": "geometry.composter12",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter1",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:on"
+					},
+					"minecraft:ticking": {
+                        "range": [50, 100],
+                        "on_tick": {
+                            "event": "7md:water"
+                        }
+                    }
+				}
+			},
+			{
+				"condition": "query.block_property('7md:state') == 13",
+				"components":{
+					"minecraft:geometry": "geometry.composter12",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "composter2",
+							"render_method": "alpha_test"
+						}
+					},
+                    "minecraft:on_interact": {
+						"event":"7md:water_on"
+					}
+				}
+			}
+        ],
+        "events": {
+            "7md:off": {
+                "sequence": [
+                    {
+                        "condition": "query.get_equipped_item_name == 'wheat_seeds'",
+                        "set_block_property": {
+                            "7md:state": "query.block_property('7md:state')+1"
+                        },
+                        "decrement_stack":{
+                     
+						}
+                    },
+					{
+                        "condition": "query.get_equipped_item_name == 'wheat'",
+                        "set_block_property": {
+                            "7md:state": "query.block_property('7md:state')+4"
+                        },
+                        "decrement_stack":{
+                     
+						}
+                    },
+					{
+                        "condition": "query.get_equipped_item_name == 'tallgrass'",
+                        "set_block_property": {
+                            "7md:state": "query.block_property('7md:state')+3"
+                        },
+                        "decrement_stack":{
+                     
+						}
+                    },
+                    {
+                        "condition": "query.get_equipped_item_name == 'leaves'",
+                        "set_block_property": {
+                            "7md:state": "12"
+                        },
+                        "decrement_stack":{
+                     
+						}
+                    },
+					{
+                        "condition": "query.get_equipped_item_name == 'water_bucket'",
+                        "set_block_property": {
+                            "7md:state": "13"
+                        },
+                        "decrement_stack":{
+                     
+						}
+                    }
+                ]
+            },
+            "7md:on": {
+                "set_block_property": {
+					"7md:state": "0"
+				},
+                "spawn_loot": {
+                    "table": "loot_tables/mod/composter.json"
+                }
+            },
+			"7md:water_on": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name == 'dirt'",
+						"set_block_property": {
+							"7md:state": "0"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/mod/composter_water/dirt.json"
+						},
+						"decrement_stack":{
+                     
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'leaves'",
+						"set_block_property": {
+							"7md:state": "0"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/mod/composter_water/birtch_leaves.json"
+						},
+						"decrement_stack":{
+                     
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'sapling'",
+						"set_block_property": {
+							"7md:state": "0"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/mod/composter_water/birtch_sapling.json"
+						},
+						"decrement_stack":{
+                     
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'bucket'",
+						"set_block_property": {
+							"7md:state": "0"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/mod/composter_water/water_bucket.json"
+						},
+						"decrement_stack":{
+                     
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'planks'",
+						"set_block_property": {
+							"7md:state": "0"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/mod/composter_water/birtch_planks.json"
+						},
+						"decrement_stack":{
+                     
+						}
+					}
+				]
+			},
+			"7md:water": {
+                "set_block_property": {
+					"7md:state": "13"
+				}
+            },
+			"drop": {
+				"sequence": [
+					{
+						"condition": "query.block_property('7md:state') == 1",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed1.json"
+						}
+					},
+					{
+						"condition": "query.block_property('7md:state') == 2",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed2.json"
+							
+						}
+						
+					},
+					{
+						"condition": "query.block_property('7md:state') == 3",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed3.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 4",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed4.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 5",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed5.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 6",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed6.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 7",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed7.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 8",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed8.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 9",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed9.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 10",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed10.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 11",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed11.json"
+							
+						}
+						
+					},					{
+						"condition": "query.block_property('7md:state') == 12",
+						"spawn_loot": {
+							"table": "loot_tables/mod/seed/seed12.json"
+							
+						}
+						
+					},
+					{
+						"condition": "query.block_property('7md:state') == 13",
+						"set_block": {
+							"block_type": "minecraft:water"
+						}
+					}
+				]
+			}
+        }
+    }
+}

@@ -1,0 +1,215 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "7md:dirt_base",
+			"properties": {
+				"7md:rotation": [2, 3, 4, 5],
+				"7md:state": [
+					0,
+					1,
+					2,
+					3
+				]
+			},
+			"is_experimental": false
+		},
+		"components": {
+			"tag:dirt_base": {},
+			"tag:dirt": {},
+			"minecraft:pick_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 4, 16]
+			},
+			"minecraft:entity_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 4, 16]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 0.75,
+			"minecraft:on_player_placing": {
+				"event": "7md:set_rotation"
+			},
+			"minecraft:creative_category": {
+				"category": "items"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "drop"
+			},
+			"minecraft:on_interact": {
+				"event":"7md:crash",
+				"condition": "query.get_equipped_item_name(1) == 'wooden_hammer'"
+			},
+			"minecraft:map_color": "#FCC100"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('7md:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [0, 0, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('7md:rotation') == 3",
+				"components": {
+					"minecraft:rotation": [0, 180, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('7md:rotation') == 4",
+				"components": {
+					"minecraft:rotation": [0, 90, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('7md:rotation') == 5",
+				"components": {
+					"minecraft:rotation": [0, 270, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('7md:state') == 0",
+				"components":{
+					"minecraft:geometry": "geometry.dirt_crasher",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "dirt_base",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "7md:set_dirt",
+						"target" : "other"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('7md:state') == 1",
+				"components":{
+					"minecraft:geometry": "geometry.dirt_crasher_with",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "dirt_base_with",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('7md:state') == 2",
+				"components":{
+					"minecraft:geometry": "geometry.dirt_crasher_with",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "dirt_base_with_cobble",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('7md:state') == 3",
+				"components":{
+					"minecraft:geometry": "geometry.dirt_crasher_with",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "dirt_base_with_grass",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			}
+		],
+        "events": {
+			"7md:set_rotation": {
+				"set_block_property": {
+					"7md:rotation": "(query.cardinal_facing_2d)"
+				}
+			},
+			"7md:set_dirt": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name == 'dirt'",
+						"set_block_property":{
+							"7md:state":"query.block_property('7md:state')+1"
+						 },
+						"decrement_stack":{
+                     
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'cobblestone'",
+						"set_block_property":{
+							"7md:state":"query.block_property('7md:state')+2"
+						 },
+						"decrement_stack":{
+                     
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'grass'",
+						"set_block_property":{
+							"7md:state":"query.block_property('7md:state')+3"
+						 },
+						"decrement_stack":{
+                     
+						}
+					}
+				]
+			},
+			"7md:crash": {
+				"sequence": [
+					{
+						"condition": "query.block_property('7md:state') == 1",
+						"set_block_property":{
+							"7md:state":"query.block_property('7md:state')-1"
+						},
+						"spawn_loot" :{
+							"table": "loot_tables/mod/sticks.json"
+						}
+					},
+					{
+						"condition": "query.block_property('7md:state') == 2",
+						"set_block_property":{
+							"7md:state":"query.block_property('7md:state')-2"
+						},
+						"spawn_loot" :{
+							"table": "loot_tables/mod/pebbles.json"
+						}
+					},
+					{
+						"condition": "query.block_property('7md:state') == 3",
+						"set_block_property":{
+							"7md:state":"query.block_property('7md:state')-3"
+						},
+						"spawn_loot" :{
+							"table": "loot_tables/mod/grass.json"
+						}
+					}
+				]
+			},
+			"drop": {
+				"sequence": [
+					{
+						"condition": "query.block_property('7md:state') == 1",
+						"spawn_loot": {
+							"table": "loot_tables/blocks/dirt_crasher_with.json"
+						}
+					},
+					{
+						"condition": "query.block_property('7md:state') == 2",
+						"spawn_loot": {
+							"table": "loot_tables/blocks/dirt_crasher_with_wood.json"
+						}
+					},
+					{
+						"condition": "query.block_property('7md:state') == 3",
+						"spawn_loot": {
+							"table": "loot_tables/mod/composter_water/dirt.json"
+						}
+					}
+				]
+			}
+		}
+	}
+}

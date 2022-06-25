@@ -1,0 +1,16 @@
+{
+  "format_version": [1, 1, 0 ],
+  "7md:dirt_base": {
+    "sound": "gravel"
+  },
+  "7md:sieve": {
+    "textures": "sieve0",
+    "sound": "stone"
+  },
+  "7md:pebbles_block": {
+    "sound": "stone"
+  },
+  "7md:seed_composter": {
+    "sound": "wood"
+  }
+}

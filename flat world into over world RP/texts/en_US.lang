@@ -1,0 +1,9 @@
+tile.7md:dirt_crasher.name=Dirt Crasher
+tile.7md:dirt_base.name=Dirt Base
+tile.7md:sieve.name=Sieve
+tile.7md:seed_composter.name=Seed composter
+tile.7md:stone_couldren.name=Stone Couldren
+item.7md:wooden_hammer=Wooden hammer
+item.7md:pebbles=Pebbles
+entity.hmd:piston_entity.name=piston entity
+item.spawn_egg.entity.hmd:piston_entity.name=Spawn piston entity

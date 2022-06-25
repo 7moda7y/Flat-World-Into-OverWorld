@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            " / ",
+            " / "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks"
+            },
+            "/": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "7md:wooden_pickaxe",
+            "count": 1
+        },
+        "description": {
+            "identifier": "7md:wooden_pickaxe"
+        }
+    }
+}

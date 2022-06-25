@@ -1,0 +1,24 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "# #",
+            "# #",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:cobblestone"
+            }
+        },
+        "result": {
+            "item": "7md:stone_couldren"
+        },
+        "description": {
+            "identifier": "7mod:stone_couldren"
+        }
+    }
+}

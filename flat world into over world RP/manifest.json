@@ -1,0 +1,29 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "",
+		"name": "flat world into over world RP",
+		"uuid": "d4417cff-b1c5-478e-9c7d-bdaeb0b7ef73",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 16, 100]
+	},
+	"modules": [
+		{
+			"description": "",
+			"type": "resources",
+			"uuid": "1cb27e81-27ba-4cb4-8cf5-f18ae108b2c7",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "67e295f1-7512-4638-86ae-e421825ee35f",
+			"version": [1, 0, 0]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.0.6"]
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#P#",
+            "PPP"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:leaves"
+            },
+            "P": {
+                "item": "minecraft:planks"
+            }
+        },
+        "result": {
+            "item": "minecraft:sapling",
+            "count": 1
+        },
+        "description": {
+            "identifier": "7md:sapling"
+        }
+    }
+}

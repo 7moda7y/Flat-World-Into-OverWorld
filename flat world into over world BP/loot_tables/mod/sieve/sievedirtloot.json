@@ -1,0 +1,36 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 3,
+                "max": 5
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 20,
+                    "name": "7md:pebbles"
+                },
+                {
+                    "type": "item",
+                    "weight": 10,
+                    "name": "7md:worm",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "weight": 1,
+                    "name": "minecraft:wheat_seeds"
+                }
+            ]
+        }
+    ]
+}
